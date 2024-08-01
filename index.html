@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/avatar.jpeg" type="image/x-icon">
+</head>
+
+<body>
+    <div id="content">
+        <h1>TO DO <span>LIST</span></h1>
+        <div id="hero-content">
+            <input type="text" name="text" id="text" placeholder="Type hereee....">
+            <div id="btn-content">
+                <button id="btn" onclick="addItem()">
+                    Add
+                </button>
+                <button id="cbtn" onclick="clearItem()">
+                    Clear All
+                </button>
+            </div>
+        </div>
+
+        <table>
+            <tbody id="container">
+                <tr>
+                    <th id="srnoth">Sr. No.</th>
+                    <th id="todoth">To Do</th>
+                    <th id="statusth">Status</th>
+                    <th id="actionth">Action</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="box">
+        <div>
+            <h1>Alert</h1>
+            <p>Input can not be null!!!</p>
+        </div>
+        <button onclick="displayBoxNone()">Okay</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/93f8c5dee5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

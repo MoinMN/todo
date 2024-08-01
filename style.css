@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto&display=swap');
+
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e1e1e1;
+}
+
+body::before {
+    content: "";
+    background: url('img/img1.jpg') no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#content {
+    background-color: whitesmoke;
+    border-radius: 12px;
+    border: 2px solid grey;
+    padding: 8px 90px;
+    width: 50%;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 26px 18px;
+}
+
+#content h1::selection {
+    background-color: yellow;
+}
+
+#content h1 span::selection {
+    background-color: yellow;
+}
+
+#content h1 span {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 700;
+    color: rgb(255, 135, 183);
+}
+
+#content #text {
+    font-size: 1.1rem;
+    outline: none;
+    border: 1px solid grey;
+    padding: 4px;
+    /* width: 275px; */
+    width: 70%;
+    border-radius: 6px;
+}
+
+#content #btn {
+    background-color: antiquewhite;
+    padding: 4px 18px;
+    font-size: 1.1rem;
+    margin-left: 14px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+
+.checkboxBtn {
+    cursor: pointer;
+}
+
+.active {
+    text-decoration: line-through;
+}
+
+.tdCheckboxDelete {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tdCheckboxDelete i:hover {
+    color: red;
+}
+
+#cbtn:hover {
+    background-color: red;
+    color: white;
+}
+
+#cbtn {
+    background-color: antiquewhite;
+    padding: 4px 18px;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    /* margin-left: 14px; */
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 500ms ease-in;
+}
+
+#hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+#btn-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    width: 30%;
+    /* background-color: red; */
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling the table header */
+th {
+    background-color: #c8ffca;
+    color: black;
+    font-size: 1.1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+
+
+th,
+td {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+#srnoth {
+    width: 50px;
+}
+
+#todoth {
+    width: 270px;
+}
+
+#statusth {
+    width: 65px;
+}
+
+#actionth {
+    width: 50px;
+}
+
+/* Styling the table rows */
+tbody tr {
+    background-color: #f9f9f9;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+    background-color: #e1e1e1;
+    cursor: pointer;
+}
+
+#box h1{
+    font-size: 1.5rem;
+}
+#box p{
+    font-size: 1rem;
+}
+#box button{
+    cursor: pointer;
+    font-size: 1rem;
+    background-color: #e1e1e1;
+    border: 1px solid black;
+    border-radius: 12px;
+}
+#box {
+    display: none;
+    flex-direction: column;
+    gap: 1em;
+    position: absolute;
+    background-color: white;
+    padding: 12px 8px;
+    border-radius: 12px;
+    border: none;
+    z-index: 1;
+    overflow: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+
+@media (max-width: 1390px) {
+    #content #text {
+        /* width: 275px; */
+        width: 60%;
+    }
+
+    #btn-content {
+        gap: 0.4em;
+        width: 35%;
+        /* background-color: red; */
+    }
+}
+
+@media (max-width: 1120px) {
+    #content #text {
+        width: 75%;
+    }
+
+    #hero-content {
+        flex-direction: column;
+        /* background-color: red; */
+    }
+
+    #btn-content {
+        /* background-color: green; */
+        justify-content: space-around;
+        width: 100%;
+        /* background-color: red; */
+    }
+}
+
+@media (max-width: 830px) {
+    #content #text {
+        width: 90%;
+    }
+
+    #btn,
+    #cbtn {
+        margin: 8px;
+        width: 35%;
+    }
+
+}
+
+@media (max-width: 780px) {
+    #content {
+        background: none;
+        border: none;
+        width: 95%;
+    }
+
+    #hero-content {
+        gap: 0.5em;
+    }
+}
+
+@media (max-width: 560px) {
+    #content {
+        padding: 6px 30px;
+        /* width: 35%; */
+        margin: 12px 0;
+    }
+
+    table {
+        width: 100%;
+        /* width: 100px; */
+        margin: 12px auto;
+    }
+
+    #srnoth {
+        width: 2px;
+    }
+
+    #todoth {
+        width: 100px;
+    }
+
+    #statusth {
+        width: 40px;
+    }
+
+    #actionth {
+        width: 30px;
+    }
+
+}
+
+@media (max-width: 450px) {
+    #content {
+        padding: 0;
+        /* width: 90%; */
+        margin: 0;
+    }
+
+    #content h1 {
+        font-size: 2.3rem;
+        padding: 13px 11px;
+    }
+
+    #content #text {
+        font-size: 1rem;
+    }
+
+    #btn-content #btn {
+        font-size: 1rem;
+    }
+
+    #btn-content #cbtn {
+        font-size: 1rem;
+    }
+
+    table {
+        margin: 4px auto;
+        font-size: 1rem;
+    }
+
+    th,
+    td {
+        padding: 4px 8px;
+    }
+}
