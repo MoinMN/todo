@@ -137,7 +137,6 @@ const displayBoxNone = () =>{
 
 // on pressing enter button
 document.getElementById('text').addEventListener("keypress", (evt)=>{
-    console.log(evt.key);
     if(evt.key === "Enter") 
         addItem();
 });
